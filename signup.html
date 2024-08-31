@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyFilmsList</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="imagens/logo-pipoca.png"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <nav
+      class="flex flex-col items-center justify-between p-4 bg-white text-black"
+    >
+      <!-- Logo e Botão -->
+      <div class="w-full flex flex-row justify-between items-center">
+        <div class="flex flex-row w-1/2">
+          <img src="imagens/logo-pipoca.png" alt="Logo" class="w-20" />
+
+          <h1
+            class="font-shrikhand font-extrabold text-4xl text-[rgb(64,64,64)]"
+          >
+            MyFilmsList
+          </h1>
+        </div>
+        <div class="flex flex-row justify-end w-1/2 gap-3">
+          <button
+            class="border-2 border-black hover:border-gray-400 text-black hover:text-gray-400 font-bold py-2 px-4 rounded"
+          >
+            Entrar
+          </button>
+          <button
+            class="border-2 border-black hover:border-gray-400 text-black hover:text-gray-400 font-bold py-2 px-4 rounded"
+          >
+            Cadastrar-se
+          </button>
+        </div>
+      </div>
+
+      <!-- Traço de separação -->
+      <hr class="w-full border-black" />
+
+      <!-- Menu Horizontal -->
+      <div class="flex flex-row justify-between w-full">
+        <div class="w-1/2 flex flex-row justify-start">
+          <ul class="flex space-x-8">
+            <li>
+              <a href="searchFilm.html" class="text-black hover:text-gray-400 text-xl"
+                >Filmes</a
+              >
+            </li>
+            <li>
+              <a href="searchSerie.html" class="text-black hover:text-gray-400 text-xl"
+                >Séries</a
+              >
+            </li>
+            <li>
+              <a href="forum.html" class="text-black hover:text-gray-400 text-xl"
+                >Fórum</a
+              >
+            </li>
+            <li>
+              <a href="help.html" class="text-black hover:text-gray-400 text-xl"
+                >Ajuda</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Barra de Pesquisa -->
+        <div class="w-1/2 flex flex-row justify-end py-4">
+          <div class="relative">
+            <input
+              type="text"
+              placeholder="Filmes, séries..."
+              class="border-2 border-black text-black rounded-xl py-2 px-4 pl-10 focus:outline-none focus:ring-2 focus:ring-gray-500"
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 text-black absolute left-3 top-1/2 transform -translate-y-1/2"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M12.9 14.32a8 8 0 111.42-1.42l4.3 4.3a1 1 0 01-1.42 1.42l-4.3-4.3zM8 14a6 6 0 100-12 6 6 0 000 12z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="h-auto pb-20 flex justify-center">
+      <section
+        class="bg-[rgb(217,217,217)] p-8 rounded shadow-md w-full max-w-sm"
+      >
+        <h2 class="text-2xl font-bold mb-6 text-center">Cadastrar-se</h2>
+        <form action="#" method="post">
+          <div class="mb-4">
+            <label for="name" class="block text-sm font-medium text-gray-700"
+              >Nome de Usuário</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block text-sm font-medium text-gray-700"
+              >E-mail</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm"
+            />
+          </div>
+          <div class="mb-6">
+            <label
+              for="password"
+              class="block text-sm font-medium text-gray-700"
+              >Senha</label
+            >
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm"
+            />
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-gray-900 text-white py-2 px-4 rounded-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+          >
+            <a href="pag-inicial-perfil.html">Entrar</a>
+          </button>
+        </form>
+        <div class="my-6 flex items-center justify-between">
+          <hr class="flex-grow border-gray-300" />
+          <span class="mx-4 text-gray-500">ou</span>
+          <hr class="flex-grow border-gray-300" />
+        </div>
+        <div class="flex flex-col gap-4">
+          <button
+            type="button"
+            class="w-full flex items-center justify-center bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50"
+          >
+            Conectar com Google
+          </button>
+          <button
+            type="button"
+            class="w-full flex items-center justify-center bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50"
+          >
+            Conectar com Facebook
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <!--<section class="h-screen flex justify-center">
+        <div class="h-[70%] w-[40%] bg-[rgb(217,217,217)] rounded">
+
+        </div>
+    </section>-->
+
+    <footer class="text-black p-6">
+      <hr class="w-full border-black py-5" />
+
+      <div
+        class="container mx-auto flex flex-col md:flex-row justify-between items-center"
+      >
+        <div class="mb-4 md:mb-0">
+          <h3 class="text-lg font-bold">MyFilmsList</h3>
+          <p class="text-sm">© 2024 Todos os direitos reservados.</p>
+        </div>
+        <div class="mb-4 md:mb-0">
+          <ul class="flex space-x-6">
+            <li><a href="#" class="hover:text-gray-400">Início</a></li>
+            <li>Nos Siga</li>
+            <img src="imagens/witter-icon.png" alt="" class="w-8" />
+            <img src="imagens/facebook-icon.png" alt="" class="w-8" />
+            <img src="imagens/discord-icon.png" alt="" class="w-8" />
+          </ul>
+        </div>
+        <div>
+          <p class="text-sm">Telefone: (00) 1234-5678</p>
+          <p class="text-sm">Email: contato@minhaempresa.com</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyFilmsList</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="imagens/logo-pipoca.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <nav
+      class="flex flex-col items-center justify-between p-4 bg-white text-black"
+    >
+      <!-- Logo e Botão -->
+      <div class="w-full flex flex-row justify-between items-center">
+        <div class="flex flex-row w-1/2">
+          <img src="imagens/logo-pipoca.png" alt="Logo" class="w-20" />
+
+          <h1
+            class="font-shrikhand font-extrabold text-4xl text-[rgb(64,64,64)]"
+          >
+            MyFilmsList
+          </h1>
+        </div>
+        <div class="flex flex-row justify-end w-1/2 gap-3">
+            <div class="flex flex-row justify-end w-1/2 h-14">
+                <img src="imagens/perfil-icon.png" alt="">
+              </div>
+        </div>
+      </div>
+
+      <!-- Traço de separação -->
+      <hr class="w-full border-black" />
+
+      <!-- Menu Horizontal -->
+      <div class="flex flex-row justify-between w-full">
+        <div class="w-1/2 flex flex-row justify-start">
+          <ul class="flex space-x-8">
+            <li><a href="searchFilm.html" class="text-black hover:text-gray-400 text-xl">Filmes</a></li>
+            <li><a href="searchSerie.html" class="text-black hover:text-gray-400 text-xl">Séries</a></li>
+            <li><a href="forum.html" class="text-black hover:text-gray-400 text-xl">Fórum</a></li>
+            <li><a href="help.html" class="text-black hover:text-gray-400 text-xl">Ajuda</a></li>
+          </ul>
+        </div>
+
+        <!-- Barra de Pesquisa -->
+        <div class="w-1/2 flex flex-row justify-end py-4">
+          <div class="relative">
+            <input
+              type="text"
+              placeholder="Filmes, séries..."
+              class="border-2 border-black text-black rounded-xl py-2 px-4 pl-10 focus:outline-none focus:ring-2 focus:ring-gray-500"
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 text-black absolute left-3 top-1/2 transform -translate-y-1/2"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M12.9 14.32a8 8 0 111.42-1.42l4.3 4.3a1 1 0 01-1.42 1.42l-4.3-4.3zM8 14a6 6 0 100-12 6 6 0 000 12z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="h-auto flex justify-center">
+        <div class="h-[90%] w-[90%] bg-[rgb(217,217,217)] rounded">
+
+            <!-- Seção 1-->
+            <div class="mb-8">
+                <h2 class="text-lg font-bold mb-4 pt-4 pl-4">Últimas Novidades</h2>
+                <div class="relative">
+                    <!--<button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full">
+                        &lt;
+                    </button>-->
+                      <div class="flex space-x-4 overflow-x-auto gap-12 py-4 px-14 h-[345px]">
+                        <div class="w-48 flex-shrink-0 hover:scale-105">
+                            <img src="imagens/deadpool-wolverine-poster.jpg" alt="Deadpool e Wolverine" class=" w-100 h-[290px] rounded">
+                        </div>
+                        <div class="w-48 flex-shrink-0 hover:scale-105">
+                            <img src="imagens/divertidamente-poster.jpeg" alt="Divertida Mente 2" class=" w-100 h-[290px] rounded">
+                        </div>
+                        <div class="w-48 flex-shrink-0 hover:scale-105">
+                            <img src="imagens/avatar-poster.jpg" alt="Avatar 2" class="w-100 h-[290px] rounded">
+                        </div>
+                        <div class="w-48 flex-shrink-0 hover:scale-105">
+                          <img src="imagens/madame-teia-poster.jpg" alt="Madame Teia" class=" w-100 h-[290px] rounded">
+                      </div>
+                      <div class="w-48 flex-shrink-0 hover:scale-105">
+                        <img src="imagens/um-lugar-silencioso-poster.webp" alt="Um Lugar Silencioso" class=" w-100 h-[290px] rounded">
+                      </div>
+                      <div class="w-48 flex-shrink-0 hover:scale-105">
+                      <img src="imagens/imaculada-poster.webp" alt="Imaculada" class=" w-100 h-[290px] rounded">
+                      </div>
+                      <div class="w-48 flex-shrink-0 hover:scale-105">
+                    <img src="imagens/a-teia-poster.jpg" alt="A Teia" class=" w-100 h-[290px] rounded">
+                     </div>                  
+                    </div>                   
+                    <!--<button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full">
+                        &gt;
+                    </button>-->
+                </div>
+            </div>
+        
+            <!-- Seção 2 -->
+            <div>
+                <h2 class="text-lg font-bold mb-4 pl-4">Filmes Aclamados pela Crítica</h2>
+                <div class="relative">
+                    <!--<button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full">
+                        &lt;
+                    </button>-->
+                    <div class="flex space-x-4 overflow-x-auto gap-12 py-4 px-14 h-[345px]">
+                      <div class="w-48 flex-shrink-0 hover:scale-105">
+                          <img src="imagens/o-poderoso-chefao-poster.jpg" alt="O Poderoso Chefão" class=" w-100 h-[290px] rounded">
+                      </div>
+                      <div class="w-48 flex-shrink-0 hover:scale-105">
+                          <img src="imagens/a-viagem-de-chihiro-poster.jpg" alt="A Viagem de Chihiro" class=" w-100 h-[290px] rounded">
+                      </div>
+                      <div class="w-48 flex-shrink-0 hover:scale-105">
+                          <img src="imagens/django-livre-poster.jpg" alt="Django Livre" class="w-100 h-[290px] rounded">
+                      </div>
+                      <div class="w-48 flex-shrink-0 hover:scale-105">
+                        <img src="imagens/orgulho-e-preconceito.jpg" alt="Orgulho e Preconceito" class=" w-100 h-[290px] rounded">
+                    </div>
+                    <div class="w-48 flex-shrink-0 hover:scale-105">
+                      <img src="imagens/corra-poster.jpg" alt="Corra" class=" w-100 h-[290px] rounded">
+                    </div>
+                    <div class="w-48 flex-shrink-0 hover:scale-105">
+                    <img src="imagens/sicario-poster.jpg" alt="Sicario" class=" w-100 h-[290px] rounded">
+                    </div>
+                    <div class="w-48 flex-shrink-0 hover:scale-105">
+                  <img src="imagens/hereditario-poster.jpg" alt="Hereditario" class=" w-100 h-[290px] rounded">
+                   </div>                  
+                  </div>
+                    <!--<button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full">
+                        &gt;
+                    </button>-->
+                </div>
+            </div>
+            <!-- Seção 3 -->
+            <div>
+              <h2 class="text-lg font-bold mb-4 pl-4">Séries Aclamadas pela Crítica</h2>
+              <div class="relative">
+                  <!--<button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full">
+                        &lt;
+                    </button>-->     
+                  <div class="flex space-x-4 overflow-x-auto gap-12 py-4 px-14 h-[345px]">
+                    <div class="w-48 flex-shrink-0 hover:scale-105">
+                        <img src="imagens/sandman-poster.jpg" alt="Sandman" class=" w-100 h-[290px] rounded">
+                    </div>
+                    <div class="w-48 flex-shrink-0 hover:scale-105">
+                        <img src="imagens/the-walking-dead-poster.jpg" alt="The Walking Dead" class=" w-100 h-[290px] rounded">
+                    </div>
+                    <div class="w-48 flex-shrink-0 hover:scale-105">
+                        <img src="imagens/the-office-poster.jpg" alt="The Office" class="w-100 h-[290px] rounded">
+                    </div>
+                    <div class="w-48 flex-shrink-0 hover:scale-105">
+                      <img src="imagens/the-flash.jpg" alt="The Flash" class=" w-100 h-[290px] rounded">
+                  </div>
+                  <div class="w-48 flex-shrink-0 hover:scale-105">
+                    <img src="imagens/peaky-blinders-poster.jpg" alt="Peaky Blinders" class=" w-100 h-[290px] rounded">
+                  </div>
+                  <div class="w-48 flex-shrink-0 hover:scale-105">
+                  <img src="imagens/como-defender-um-assassino.jpg" alt="Como defender um Assassino" class=" w-100 h-[290px] rounded">
+                  </div>
+                  <div class="w-48 flex-shrink-0 hover:scale-105">
+                <img src="imagens/o-gambito-da-rainha.jpg" alt="O Gambito da Rainha" class=" w-100 h-[290px] rounded">
+                 </div>                  
+                </div>
+                  <!--<button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full">
+                        &gt;
+                    </button>-->
+              </div>
+          </div>
+        </div>
+        </div>
+    </section>
+
+    <footer class=" text-black p-6">
+        <hr class="w-full border-black py-5"/>
+
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <h3 class="text-lg font-bold">MyFilmsList</h3>
+                <p class="text-sm">© 2024 Todos os direitos reservados.</p>
+            </div>
+            <div class="mb-4 md:mb-0">
+                <ul class="flex space-x-6">
+                    <li><a href="#" class="hover:text-gray-400">Início</a></li>
+                    <li>Nos Siga</li>
+                    <img src="imagens/twitter-icon.png" alt="" class="w-8">
+                    <img src="imagens/facebook-icon.png" alt="" class="w-8">
+                    <img src="imagens/discord-icon.png" alt="" class="w-8">
+                </ul>
+            </div>
+            <div>
+                <p class="text-sm">Telefone: (00) 1234-5678</p>
+                <p class="text-sm">Email: contato@minhaempresa.com</p>
+            </div>
+        </div>
+    </footer>
+  </body>
+</html>
