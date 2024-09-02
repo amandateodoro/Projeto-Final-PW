@@ -61,31 +61,72 @@
       </div>
     </div>
   </nav>
-  
+
   <div class="h-auto pb-20 flex flex-row justify-center">
     <section class="bg-[rgb(217,217,217)] p-8 rounded shadow-md w-full max-w-sm">
-      <div class="bg-[rgb(217,217,217)] rounded-lg shadow-md p-4 max-w-xs">
-        <img src="imagens/the-walking-dead-poster.jpg" alt="The Walking Dead" class="rounded-lg w-full h-auto">
-        <div class="mt-4">
-            <h2 class="text-xl font-bold">The Walking Dead</h2>
-            <p class="text-gray-700 mt-2 text-sm text-justify">
-                The Walking Dead conta a história de um pequeno grupo de sobreviventes em um mundo pós-apocalíptico cheio de mortos-vivos. A série apresenta a excessiva jornada do grupo liderado por Rick Grimes, em busca de suprimentos e refúgios seguros.
-            </p>
-        </div>        
-        <div class="flex flex-row justify-center">
-          <button
-            type="submit"
-            class="mt-4 bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700 justify-center"
-          >
-            <a href="add-serie-list.html">Adicionar a Lista</a>
-          </button>
-        </div>        
-    </div>
+        <div class="bg-[rgb(217,217,217)] rounded-lg shadow-md p-4 max-w-xs">
+            <img src="imagens/the-walking-dead-poster.jpg" alt="The Walking Dead" class="rounded-lg w-full h-auto">
+            <div class="mt-4">
+                <h2 class="text-xl font-bold">The Walking Dead</h2>
+                <p class="text-gray-700 mt-2 text-sm text-justify">
+                    The Walking Dead conta a história de um pequeno grupo de sobreviventes em um mundo pós-apocalíptico cheio de mortos-vivos. A série apresenta a excessiva jornada do grupo liderado por Rick Grimes, em busca de suprimentos e refúgios seguros.
+                </p>
+            </div>                 
+        </div>
+        <form>
+            <div class="mb-4">
+                <label for="status" class="block text-gray-700 mb-2 pt-5">Status</label>
+                <select id="status" name="status" class="w-full p-2 border border-gray-300 rounded-lg">
+                    <option value="assistido">Assistido</option>
+                    <option value="quero-assistir">Quero assistir</option>
+                    <option value="assistindo">Assistindo</option>
+                </select>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 mb-2">Avaliação</label>
+                <div class="flex space-x-2">
+                    <input type="radio" id="star5" name="rating" value="5" class="hidden">
+                    <label for="star5" class="cursor-pointer text-gray-500 5 y- text-2xl hover:text-yellow-400">★</label>
+
+                    <input type="radio" id="star4" name="rating" value="4" class="hidden">
+                    <label for="star4" class="cursor-pointer text-gray-500 text-2xl hover:text-yellow-400">★</label>
+
+                    <input type="radio" id="star3" name="rating" value="3" class="hidden">
+                    <label for="star3" class="cursor-pointer text-gray-500 text-2xl hover:text-yellow-400">★</label>
+
+                    <input type="radio" id="star2" name="rating" value="2" class="hidden">
+                    <label for="star2" class="cursor-pointer text-gray-500 text-2xl hover:text-yellow-400">★</label>
+
+                    <input type="radio" id="star1" name="rating" value="1" class="hidden">
+                    <label for="star1" class="cursor-pointer text-gray-500 text-2xl hover:text-yellow-400">★</label>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label for="comment" class="block text-gray-700 mb-2">Comentário</label>
+                <textarea id="comment" name="comment" placeholder="Escreva seu comentário aqui..." class="w-full p-2 border border-gray-300 rounded-lg h-24"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-gray-900 text-white p-2 rounded-lg hover:bg-gray-800">Adicionar</button>
+        </form>
     </section>
-  </div> 
+  </div>   
+<script>
+    const stars = document.querySelectorAll('label[for^="star"]');
+    stars.forEach((star, index) => {
+        star.addEventListener('click', () => {
+            stars.forEach((s, i) => {
+                s.classList.remove('text-yellow-400');
+                s.classList.add('text-gray-300');
+                if (i <= index) {
+                    s.classList.add('text-yellow-400');
+                }
+            });
+        });
+    });
+</script> 
 
   <footer class="text-black p-6">
     <hr class="w-full border-black py-5" />
+
     <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
       <div class="mb-4 md:mb-0">
         <h3 class="text-lg font-bold">MyFilmsList</h3>
